@@ -2,10 +2,10 @@
   "name": "mode-with-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/app.ts",
+  "main": "./dist/app.js",
   "scripts": {
     "build": "pnpm exec tsc",
-    "start": "pnpm run build && node ./build/app.js",
+    "start": "pnpm run build && node ./dist/app.js",
     "dev": "pnpm exec nodemon"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@types/node": "^20.9.4",
     "nodemon": "^3.0.1",
+    "python-shell": "^5.0.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.2"
   }
