@@ -144,3 +144,23 @@
 1. ```bash
     pnpm run dev
     ```
+
+## Configurar o  Python
+
+1. ```bash
+    py -3 -m pip install --user poetry
+    ```
+
+1. Verificar se o poetry está instalado corretamente
+
+    ```bash
+    poetry -V
+    ```
+
+1. ```bash
+    poetry new main
+    ```
+
+1. ```bash
+    poetry run python main.py
+    ```
