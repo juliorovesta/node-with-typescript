@@ -16,9 +16,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[csharp]": {
-    "editor.defaultFormatter": "csharpier.csharpier-vscode"
-  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.codeActionsOnSave": {
@@ -26,6 +23,5 @@
     }
   },
   "isort.args": ["--profile", "black"],
-  "importSorter.generalConfiguration.sortOnBeforeSave": true,
   "todo-tree.tree.scanMode": "workspace"
 }
