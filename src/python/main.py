@@ -1,31 +1,53 @@
 import json
-from sys import stdin
-
-# simple JSON echo script
-for line in stdin:
-    print(json.dumps(json.loads(line)))
-
-# from sys import stdin, stdout
-# import json
+from sys import stdin, stdout
 
 
-# def minha_rede_neural(valor1, valor2):
-#     return (valor1 * 2) * valor2
+class Calculator:
+    def addition(self, v1, v2):
+        return v1 + v2
+
+    def subtraction(self, v1, v2):
+        return v1 - v2
+
+    def multiplication(self, v1, v2):
+        return v1 * v2
+
+    def division(self, v1, v2):
+        return v1 / v2
 
 
-# while True:
-#     message = stdin.readline()
-#     message = json.loads(message)
-#     args = message['args']
+class App:
+    [staticmethod]
 
-#     response = {}
+    def run():
+        for line in stdin:
+            response = {}
 
-#     try:
-#         result = minha_rede_neural(*args)
-#         response['data'] = result
-#     except Exception as e:
-#         response['error'] = str(e)
+            try:
+                message = json.loads(line)
+                action = message["action"]
+                args = message["args"]
 
-#     response = json.dumps(response)
-#     stdout.write(response)
-#     stdout.flush()
+                calculator = Calculator()
+                match action:
+                    case "addition":
+                        result = calculator.addition(*args)
+                    case "subtraction":
+                        result = calculator.subtraction(*args)
+                    case "multiplication":
+                        result = calculator.multiplication(*args)
+                    case "division":
+                        result = calculator.division(*args)
+                    case _:
+                        raise Exception("Invalid action!")
+
+                response["result"] = result
+            except Exception as e:
+                response["error"] = f"{e}"
+
+            response = json.dumps(response)
+            stdout.write(f"{response} \n")
+            stdout.flush()
+
+
+App.run()
