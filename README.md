@@ -140,7 +140,7 @@
         "type": "module",
         "scripts": {
             "build": "pnpm exec tsc",
-            "start": "pnpm run build && node ./build/app.js",
+            "start": "pnpm run build && node ./dist/app.js",
             "dev": "pnpm exec nodemon"
         }
     }
