@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/app.js",
+  "type": "module",
   "scripts": {
     "build": "pnpm exec tsc",
     "start": "pnpm run build && node ./dist/app.js",
@@ -15,7 +16,7 @@
     "@types/node": "^20.9.4",
     "nodemon": "^3.0.1",
     "python-shell": "^5.0.0",
-    "ts-node-dev": "^2.0.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
   }
 }

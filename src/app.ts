@@ -1,22 +1,19 @@
-import { spawn } from "child_process";
+import { PythonShell } from "python-shell";
 
-const child = spawn("python", ["./src/python/main.py"]);
-child.on("exit", (code) => console.log("exitCode:", code));
+console.log("Starting node app...");
 
-child.stdout.on("data", function (buffer) {
-    const response = JSON.parse(buffer);
-    console.log(response);
+const pyshell = new PythonShell("./src/python/main.py", {
+    mode: "json",
+});
+pyshell.stdout.on("data", function (data) {
+    console.log(data);
 });
 
-child.stdin.write(JSON.stringify({ args: [2, 3] }) + "\n");
+pyshell.send({ a: "b", name: "julio" });
 
-// import { PythonShell } from "python-shell";
-
-// PythonShell.runString("x=1+1;print(x)").then((messages) => {
-//     console.log("finished");
-// });
-
-// import { PythonShell } from "python-shell";
-
-// const result = await PythonShell.runString("x=1+1;print(x)");
-// console.log("finished", result);
+pyshell.end(function (err, code, signal) {
+    if (err) throw err;
+    console.log("The exit code was: " + code);
+    console.log("The exit signal was: " + signal);
+    console.log("finished");
+});

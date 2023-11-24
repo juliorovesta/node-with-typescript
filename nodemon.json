@@ -1,6 +1,6 @@
 {
   "watch": ["src"],
-  "ext": ".ts,.js",
-  "ignore": [],
-  "exec": "ts-node-dev ./src/app.ts"
+  "ignore": ["node_modules"],
+  "ext": ".ts,.js,.py",
+  "exec": "node --no-warnings --loader ts-node/esm ./src/app.ts"
 }
