@@ -1,4 +1,4 @@
-import { PythonShell } from 'python-shell';
+import { PythonShell } from 'python-shell'
 
 console.log('Starting node app...')
 
