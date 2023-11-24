@@ -26,7 +26,7 @@
         pnpm dev
         ```
 
-    - Para executar em modo de normal
+    - Para executar em modo normal
 
         ```bash
         pnpm start
