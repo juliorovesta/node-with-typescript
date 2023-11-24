@@ -1,4 +1,5 @@
 import { PythonShell } from 'python-shell'
+import { setTimeout } from 'timers/promises'
 
 console.log('# Starting node app...')
 
@@ -25,3 +26,7 @@ pyshell.end((err, code, signal) => {
     console.log('The exit signal was: ' + signal)
     console.log('# Finishing node app...')
 })
+
+await setTimeout(2000)
+
+pyshell.kill('SIGQUIT')
