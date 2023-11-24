@@ -53,7 +53,7 @@
     ```
 
 1. ```bash
-    pnpm i tyescript @types/node ts-node-dev nodemon -D
+    pnpm i tyescript @types/node ts-node nodemon -D
     ```
 
 1. ```bash
@@ -102,13 +102,17 @@
 
     ```json
     {
+        "include": ["src/**/*"],
+        "exclude": ["node_modules"],
         "compilerOptions": {
-            "target": "es5",
-            "module": "commonjs",
-            "lib": ["es6"],
-            "allowJs": true,
-            "outDir": "build",
             "rootDir": "src",
+            "outDir": "./dist",
+            "target": "esnext",
+            "module": "esnext",
+            "moduleResolution": "node",
+            "lib": ["es6"],
+            "skipLibCheck": true,
+            "allowJs": true,
             "strict": true,
             "noImplicitAny": true,
             "esModuleInterop": true,
@@ -122,9 +126,9 @@
     ```json
     {
         "watch": ["src"],
-        "ext": ".ts,.js",
-        "ignore": [],
-        "exec": "ts-node-dev ./src/app.ts"
+        "ignore": ["node_modules"],
+        "ext": ".ts,.js,.py",
+        "exec": "node --no-warnings --loader ts-node/esm ./src/app.ts"
     }
     ```
 
@@ -132,7 +136,8 @@
 
     ```json
     {
-        "main": "./src/app.ts",
+        "main": "./dist/app.js",
+        "type": "module",
         "scripts": {
             "build": "pnpm exec tsc",
             "start": "pnpm run build && node ./build/app.js",

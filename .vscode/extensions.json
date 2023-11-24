@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "dracula-theme.theme-dracula",
+    "ms-vsliveshare.vsliveshare",
+    "pkief.material-icon-theme",
+    "vscode-icons-team.vscode-icons",
+    "EditorConfig.EditorConfig",
+    "ms-vscode.remote-repositories",
+    "github.remotehub",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "visualstudioexptteam.vscodeintellicode",
+    "visualstudioexptteam.vscodeintellicode-completions",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-wsl",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree",
+    "mike-co.import-sorter"
+  ]
+}
