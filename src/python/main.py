@@ -1,5 +1,5 @@
-from sys import stdin
 import json
+from sys import stdin
 
 # simple JSON echo script
 for line in stdin:

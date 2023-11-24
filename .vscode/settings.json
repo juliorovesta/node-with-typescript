@@ -1,0 +1,31 @@
+{
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.autoReveal": false,
+  "scm.defaultViewMode": "tree",
+  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Fira Code', Consolas, 'Courier New'",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Fira Code', Consolas, 'Courier New'",
+  "terminal.integrated.fontSize": 14,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "isort.args": ["--profile", "black"],
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "todo-tree.tree.scanMode": "workspace"
+}

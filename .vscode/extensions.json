@@ -1,0 +1,31 @@
+{
+  "recommendations": [
+    "dracula-theme.theme-dracula",
+    "ms-vsliveshare.vsliveshare",
+    "pkief.material-icon-theme",
+    "vscode-icons-team.vscode-icons",
+    "EditorConfig.EditorConfig",
+    "ms-vscode.remote-repositories",
+    "github.remotehub",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "visualstudioexptteam.vscodeintellicode",
+    "visualstudioexptteam.vscodeintellicode-completions",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.vscodeintellicode-csharp",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-wsl",
+    "ms-dotnettools.csdevkit",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree",
+    "csharpier.csharpier-vscode",
+    "mike-co.import-sorter",
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "ms-python.isort"
+  ]
+}

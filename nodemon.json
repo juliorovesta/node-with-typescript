@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ignore": ["node_modules"],
   "ext": ".ts,.js,.py",
-  "exec": "node --no-warnings --loader ts-node/esm ./src/app.ts"
+  "exec": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/app.ts"
 }
