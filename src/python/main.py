@@ -46,7 +46,6 @@ class App:
                 response["result"] = result
             except Exception as e:
                 response["error"] = f"{e}"
-                raise e
 
             response = json.dumps(response)
             stdout.write(f"{response} \n")
