@@ -9,6 +9,8 @@ class App:
     [staticmethod]
 
     def run():
+        calculator = Calculator()
+
         for line in stdin:
             response = {}
 
@@ -16,23 +18,16 @@ class App:
                 message = json.loads(line)
                 action = message["action"]
                 args = message["args"]
+
                 response["id"] = message["id"]
                 response["action"] = action
 
-                calculator = Calculator()
-                match action:
-                    case "addition":
-                        result = calculator.addition(*args)
-                    case "subtraction":
-                        result = calculator.subtraction(*args)
-                    case "multiplication":
-                        result = calculator.multiplication(*args)
-                    case "division":
-                        result = calculator.division(*args)
-                    case _:
-                        raise Exception("Invalid action!")
+                if action not in dir(calculator):
+                    raise Exception("Invalid action!")
 
-                response["success"] = result
+                method = getattr(calculator, action)
+
+                response["success"] = method(*args)
             except Exception as e:
                 response["error"] = f"{e}"
 
