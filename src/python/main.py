@@ -1,19 +1,8 @@
 import json
+import time
 from sys import stdin, stdout
 
-
-class Calculator:
-    def addition(self, v1, v2):
-        return v1 + v2
-
-    def subtraction(self, v1, v2):
-        return v1 - v2
-
-    def multiplication(self, v1, v2):
-        return v1 * v2
-
-    def division(self, v1, v2):
-        return v1 / v2
+from calculator import Calculator
 
 
 class App:
@@ -27,7 +16,7 @@ class App:
                 message = json.loads(line)
                 action = message["action"]
                 args = message["args"]
-                # response["id"] = message["id"]
+                response["id"] = message["id"]
                 response["action"] = action
 
                 calculator = Calculator()
@@ -43,9 +32,13 @@ class App:
                     case _:
                         raise Exception("Invalid action!")
 
-                response["result"] = result
+                response["success"] = result
             except Exception as e:
                 response["error"] = f"{e}"
+
+            # Hack for console flush time
+            stdout.flush()
+            time.sleep(0.1)
 
             response = json.dumps(response)
             stdout.write(f"{response} \n")
