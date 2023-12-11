@@ -7,22 +7,24 @@
   "editor.fontSize": 14,
   "terminal.integrated.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Fira Code', Consolas, 'Courier New'",
   "terminal.integrated.fontSize": 14,
-  "[typescript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[typescript][typescriptreact][javascript][javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    }
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "isort.args": ["--profile", "black"],

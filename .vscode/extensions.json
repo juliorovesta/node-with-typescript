@@ -17,7 +17,6 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "gruntfuggly.todo-tree",
-    "mike-co.import-sorter",
     "ms-python.python",
     "ms-python.black-formatter",
     "ms-python.flake8",
